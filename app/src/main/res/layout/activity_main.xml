@@ -4,4 +4,98 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"/>
+    android:layout_alignParentBottom="false"
+    android:layout_gravity="fill"
+    tools:context=".MainActivity">
+
+    <androidx.gridlayout.widget.GridLayout
+        android:layout_width="371dp"
+        android:layout_height="271dp"
+        tools:layout_editor_absoluteX="24dp"
+        tools:layout_editor_absoluteY="170dp">
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="188dp"
+            android:layout_height="128dp"
+            android:background="#4CAF50"
+            android:text="Button"
+            app:layout_column="0"
+            app:layout_gravity="fill"
+            app:layout_row="0" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="182dp"
+            android:layout_height="129dp"
+            android:background="#FF9800"
+            android:text="Button"
+            app:layout_column="1"
+            app:layout_gravity="fill"
+            app:layout_row="0" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="187dp"
+            android:layout_height="144dp"
+            android:background="#9C27B0"
+            android:text="Button"
+            app:layout_column="0"
+            app:layout_gravity="fill"
+            app:layout_row="1" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="185dp"
+            android:layout_height="135dp"
+            android:background="#00BCD4"
+            android:text="Button"
+            app:layout_column="1"
+            app:layout_gravity="fill"
+            app:layout_row="1" />
+    </androidx.gridlayout.widget.GridLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="84dp"
+        android:layout_height="45dp"
+        android:background="#FFEB3B"
+        android:text="30s"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="24dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="79dp"
+        android:layout_height="46dp"
+        android:background="#FFC107"
+        android:text="0/0"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="318dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="138dp"
+        android:layout_height="35dp"
+        android:text="21 + 30"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="135dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="224dp"
+        android:layout_height="69dp"
+        android:text="Correct!"
+        android:textAlignment="center"
+        android:textSize="50sp"
+        android:textStyle="italic"
+        tools:layout_editor_absoluteX="98dp"
+        tools:layout_editor_absoluteY="474dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

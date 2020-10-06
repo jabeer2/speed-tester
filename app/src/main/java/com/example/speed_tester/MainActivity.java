@@ -1,7 +1,6 @@
 package com.example.speed_tester;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
