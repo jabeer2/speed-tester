@@ -9,38 +9,55 @@
     tools:context=".MainActivity">
 
     <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout"
         android:layout_width="371dp"
         android:layout_height="271dp"
-        tools:layout_editor_absoluteX="24dp"
-        tools:layout_editor_absoluteY="170dp">
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="108dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/GoBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/score">
 
         <Button
             android:id="@+id/button2"
             android:layout_width="188dp"
             android:layout_height="128dp"
             android:background="#4CAF50"
-            android:text="Button"
+            android:onClick="Ans"
+            android:text="0"
+            android:textSize="50sp"
             app:layout_column="0"
             app:layout_gravity="fill"
-            app:layout_row="0" />
+            app:layout_row="0"
+            android:tag="0"/>
 
         <Button
             android:id="@+id/button3"
             android:layout_width="182dp"
             android:layout_height="129dp"
             android:background="#FF9800"
-            android:text="Button"
+            android:text="0"
+            android:tag="1"
+            android:textSize="50sp"
             app:layout_column="1"
+            android:onClick="Ans"
             app:layout_gravity="fill"
             app:layout_row="0" />
 
         <Button
             android:id="@+id/button4"
-            android:layout_width="187dp"
-            android:layout_height="144dp"
+            android:layout_width="186dp"
+            android:layout_height="138dp"
             android:background="#9C27B0"
-            android:text="Button"
+            android:gravity="fill"
+            android:text="0"
+            android:onClick="Ans"
+            android:textAlignment="center"
+            android:textSize="50sp"
             app:layout_column="0"
+            android:tag="2"
             app:layout_gravity="fill"
             app:layout_row="1" />
 
@@ -49,53 +66,107 @@
             android:layout_width="185dp"
             android:layout_height="135dp"
             android:background="#00BCD4"
-            android:text="Button"
+            android:text="0"
+            android:tag="3"
+            android:onClick="Ans"
+            android:textSize="50sp"
             app:layout_column="1"
             app:layout_gravity="fill"
             app:layout_row="1" />
+
     </androidx.gridlayout.widget.GridLayout>
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/score"
         android:layout_width="84dp"
         android:layout_height="45dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="27dp"
         android:background="#FFEB3B"
         android:text="30s"
         android:textAlignment="center"
         android:textSize="30sp"
-        tools:layout_editor_absoluteX="24dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintEnd_toStartOf="@+id/sumText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/sec"
         android:layout_width="79dp"
         android:layout_height="46dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="1dp"
         android:background="#FFC107"
         android:text="0/0"
         android:textAlignment="center"
         android:textSize="30sp"
-        tools:layout_editor_absoluteX="318dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/sumText"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/sumText"
         android:layout_width="138dp"
         android:layout_height="35dp"
-        android:text="21 + 30"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="150dp"
+        android:text="0 + 0"
         android:textAlignment="center"
         android:textSize="25sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="135dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/score"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView3"
-        android:layout_width="224dp"
-        android:layout_height="69dp"
-        android:text="Correct!"
+        android:id="@+id/desitionText"
+        android:layout_width="356dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="98dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="89dp"
+        android:layout_marginBottom="119dp"
         android:textAlignment="center"
         android:textSize="50sp"
         android:textStyle="italic"
-        tools:layout_editor_absoluteX="98dp"
-        tools:layout_editor_absoluteY="474dp" />
+        android:visibility="visible"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/GoBtn" />
+
+    <Button
+        android:id="@+id/GoBtn"
+        android:layout_width="131dp"
+        android:layout_height="98dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="350dp"
+        android:background="#F44336"
+        android:onClick="G0"
+        android:text="Go"
+        android:textSize="50sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/desitionText"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout" />
+
+    <TextView
+        android:id="@+id/cong"
+        android:layout_width="313dp"
+        android:layout_height="78dp"
+        android:layout_marginStart="63dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="61dp"
+        android:layout_marginBottom="16dp"
+        android:autoText="false"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sec" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
